@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B3BB20B6-6ABB-43AC-8752-1779319C6B89}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MasterServer.DAL.Impl</RootNamespace>
+    <AssemblyName>MasterServer.DAL.Impl</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HK2Net">
+      <HintPath>..\..\DedicatedPoolServer\HK2Net.dll</HintPath>
+    </Reference>
+    <Reference Include="MasterServer">
+      <HintPath>..\..\MasterServer.exe</HintPath>
+    </Reference>
+    <Reference Include="MasterServer.DAL">
+      <HintPath>..\..\MasterServer\MasterServer.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data" />
+    <Reference Include="OLAPHypervisor" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Util.Common">
+      <HintPath>..\..\DedicatedPoolServer\Util.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbuseReportSystem.cs" />
+    <Compile Include="AchievementsSystem.cs" />
+    <Compile Include="AnnouncementSystem.cs" />
+    <Compile Include="CacheProxy.cs" />
+    <Compile Include="CItemSystem.cs" />
+    <Compile Include="ClanSystem.cs" />
+    <Compile Include="ColdProfileDataXMLSerializer.cs" />
+    <Compile Include="ColdStorageSystem.cs" />
+    <Compile Include="CommonSystem.cs" />
+    <Compile Include="ContractSystem.cs" />
+    <Compile Include="CustomRules\CustomRulesSystem.cs" />
+    <Compile Include="DAL.cs" />
+    <Compile Include="DalVoucherSerializer.cs" />
+    <Compile Include="DataArchiveSerializer.cs" />
+    <Compile Include="ECatalog.cs" />
+    <Compile Include="FirstWinOfDayByMode\FirstWinOfDayByModeSystem.cs" />
+    <Compile Include="MasterServerLogRedirect.cs" />
+    <Compile Include="MissionSystem.cs" />
+    <Compile Include="NotificationSystem.cs" />
+    <Compile Include="PerformanceSystem.cs" />
+    <Compile Include="PlayerStatsSystem.cs" />
+    <Compile Include="ProfileProgressionSystem.cs" />
+    <Compile Include="ProfileSystem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RatingGameBanSystem.cs" />
+    <Compile Include="RatingSystem.cs" />
+    <Compile Include="RewardsSystem.cs" />
+    <Compile Include="SerializeHelper.cs" />
+    <Compile Include="SkillSystem.cs" />
+    <Compile Include="StatsMappings.cs" />
+    <Compile Include="TelemetrySystem.cs" />
+    <Compile Include="UInt64FieldSerializer.cs" />
+    <Compile Include="VoucherSystem.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

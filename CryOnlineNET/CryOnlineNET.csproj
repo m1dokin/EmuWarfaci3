@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{69619AA5-CFB1-4597-84D2-995A286286E4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CryOnlineNET</RootNamespace>
+    <AssemblyName>CryOnlineNET</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CryOnline.cs" />
+    <Compile Include="CryOnlinePINVOKE.cs" />
+    <Compile Include="ECompressType.cs" />
+    <Compile Include="EConnectionMode.cs" />
+    <Compile Include="EOnlineConnectionState.cs" />
+    <Compile Include="EOnlineError.cs" />
+    <Compile Include="EOnlineLogLevel.cs" />
+    <Compile Include="EOnlinePresence.cs" />
+    <Compile Include="EOnlineStanzaType.cs" />
+    <Compile Include="EOnlineTLSPolicy.cs" />
+    <Compile Include="EProtectResult.cs" />
+    <Compile Include="EQueryType.cs" />
+    <Compile Include="ERequestSendType.cs" />
+    <Compile Include="ICertificateValidator.cs" />
+    <Compile Include="IOnline.cs" />
+    <Compile Include="IOnlineBandwidthStats.cs" />
+    <Compile Include="IOnlineChat.cs" />
+    <Compile Include="IOnlineChatListener.cs" />
+    <Compile Include="IOnlineChatRoom.cs" />
+    <Compile Include="IOnlineChatRoomListener.cs" />
+    <Compile Include="IOnlineConfiguration.cs" />
+    <Compile Include="IOnlineConnection.cs" />
+    <Compile Include="IOnlineConnectionListener.cs" />
+    <Compile Include="IOnlineDataProtect.cs" />
+    <Compile Include="IOnlineLog.cs" />
+    <Compile Include="IOnlineQueryBinder.cs" />
+    <Compile Include="IOnlineQueryStatsListener.cs" />
+    <Compile Include="IXmlNodeHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SBaseQuery.cs" />
+    <Compile Include="SOnlineQuery.cs" />
+    <Compile Include="SQueryError.cs" />
+    <Compile Include="SQueryStats.cs" />
+    <Compile Include="SWIGTYPE_p_p_char.cs" />
+    <Compile Include="SWIGTYPE_p_size_t.cs" />
+    <Compile Include="SWIGTYPE_p_void.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
