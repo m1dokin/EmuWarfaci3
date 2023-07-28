@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{959372FE-1134-4053-9DD3-8E892100171E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MasterServer</RootNamespace>
+    <AssemblyName>MasterServer.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HK2Net">
+      <HintPath>..\..\DedicatedPoolServer\HK2Net.dll</HintPath>
+    </Reference>
+    <Reference Include="OLAPHypervisor">
+      <HintPath>..\..\MasterServer\OLAPHypervisor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Util.Common">
+      <HintPath>..\..\DedicatedPoolServer\Util.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\CRC32.cs" />
+    <Compile Include="DAL\AbuseHistorySerializer.cs" />
+    <Compile Include="DAL\AbuseReportSerializer.cs" />
+    <Compile Include="DAL\AbuseTopReportSerializer.cs" />
+    <Compile Include="DAL\AchievementInfo.cs" />
+    <Compile Include="DAL\AchievementInfoSerializer.cs" />
+    <Compile Include="DAL\AchievementUpdateSerializer.cs" />
+    <Compile Include="DAL\AddCustomerItemResponse.cs" />
+    <Compile Include="DAL\Announcement.cs" />
+    <Compile Include="DAL\AnnouncementSerializer.cs" />
+    <Compile Include="DAL\AuthorizationTokenSystem\AuthorizationToken.cs" />
+    <Compile Include="DAL\CatalogItem.cs" />
+    <Compile Include="DAL\CatalogItemSerializer.cs" />
+    <Compile Include="DAL\ClanInfo.cs" />
+    <Compile Include="DAL\ClanInfoSerializer.cs" />
+    <Compile Include="DAL\ClanKickSerializer.cs" />
+    <Compile Include="DAL\ClanMember.cs" />
+    <Compile Include="DAL\ClanMemberSerializer.cs" />
+    <Compile Include="DAL\ColdProfileData.cs" />
+    <Compile Include="DAL\ConsumeItemResponse.cs" />
+    <Compile Include="DAL\Currency.cs" />
+    <Compile Include="DAL\CustomerAccount.cs" />
+    <Compile Include="DAL\CustomerAccountSerializer.cs" />
+    <Compile Include="DAL\CustomerItem.cs" />
+    <Compile Include="DAL\CustomerItemSerializer.cs" />
+    <Compile Include="DAL\CustomRules\CustomRuleInfo.cs" />
+    <Compile Include="DAL\CustomRules\CustomRuleInfoSerializer.cs" />
+    <Compile Include="DAL\CustomRules\CustomRuleRawState.cs" />
+    <Compile Include="DAL\CustomRules\CustomRuleStateSerializer.cs" />
+    <Compile Include="DAL\CustomRules\ICustomRulesSystem.cs" />
+    <Compile Include="DAL\DALResult.cs" />
+    <Compile Include="DAL\DALResultMulti.cs" />
+    <Compile Include="DAL\DALResultVoid.cs" />
+    <Compile Include="DAL\DALStats.cs" />
+    <Compile Include="DAL\EAchevementStatus.cs" />
+    <Compile Include="DAL\EAddMemberResult.cs" />
+    <Compile Include="DAL\EAnnouncementPlace.cs" />
+    <Compile Include="DAL\EcatLogHistory.cs" />
+    <Compile Include="DAL\EcatLogHistorySerializer.cs" />
+    <Compile Include="DAL\EClanRole.cs" />
+    <Compile Include="DAL\EProfileItemStatus.cs" />
+    <Compile Include="DAL\EquipItemSerializer.cs" />
+    <Compile Include="DAL\ETouchProfileResult.cs" />
+    <Compile Include="DAL\Exceptions\DALBinaryDataLengthViolationException.cs" />
+    <Compile Include="DAL\Exceptions\DalException.cs" />
+    <Compile Include="DAL\FirstWinOfDayByMode\IFirstWinOfDayByModeSystem.cs" />
+    <Compile Include="DAL\FirstWinOfDayByMode\PvpModeWinNextOccurrence.cs" />
+    <Compile Include="DAL\FirstWinOfDayByMode\PvpModeWinNextOccurrenceSerializer.cs" />
+    <Compile Include="DAL\IAbuseReportSystem.cs" />
+    <Compile Include="DAL\IAchievementsSystem.cs" />
+    <Compile Include="DAL\IAnnouncmentSystem.cs" />
+    <Compile Include="DAL\IClanSystem.cs" />
+    <Compile Include="DAL\IColdStorageSystem.cs" />
+    <Compile Include="DAL\ICommonSystem.cs" />
+    <Compile Include="DAL\IContractSystem.cs" />
+    <Compile Include="DAL\IDAL.cs" />
+    <Compile Include="DAL\IDataReaderEx.cs" />
+    <Compile Include="DAL\IDataSerializer.cs" />
+    <Compile Include="DAL\IDBSerializer.cs" />
+    <Compile Include="DAL\IECatalog.cs" />
+    <Compile Include="DAL\IItemSystem.cs" />
+    <Compile Include="DAL\IMissionSystem.cs" />
+    <Compile Include="DAL\INotificationSystem.cs" />
+    <Compile Include="DAL\IPaymentCallback.cs" />
+    <Compile Include="DAL\IPerformanceSystem.cs" />
+    <Compile Include="DAL\IPlayerStatsSystem.cs" />
+    <Compile Include="DAL\IProfileProgressionSystem.cs" />
+    <Compile Include="DAL\IProfileSystem.cs" />
+    <Compile Include="DAL\IRewardsSystem.cs" />
+    <Compile Include="DAL\ISkillSystem.cs" />
+    <Compile Include="DAL\ITelemetrySystem.cs" />
+    <Compile Include="DAL\ItemSerializer.cs" />
+    <Compile Include="DAL\ItemSystem\ItemTypeNames.cs" />
+    <Compile Include="DAL\LeaderboardEntry.cs" />
+    <Compile Include="DAL\LeaderboardEntrySerializer.cs" />
+    <Compile Include="DAL\MasterRecord.cs" />
+    <Compile Include="DAL\MissionLB.cs" />
+    <Compile Include="DAL\MissionPerformance.cs" />
+    <Compile Include="DAL\MissionSerializer.cs" />
+    <Compile Include="DAL\MissionStatus.cs" />
+    <Compile Include="DAL\MoneyUpdateResult.cs" />
+    <Compile Include="DAL\MoneyUpdateResultMulti.cs" />
+    <Compile Include="DAL\OfferItem.cs" />
+    <Compile Include="DAL\OfferType.cs" />
+    <Compile Include="DAL\PaymentCallbackResult.cs" />
+    <Compile Include="DAL\PendingNotificationSerializer.cs" />
+    <Compile Include="DAL\PerformanceInfo.cs" />
+    <Compile Include="DAL\PerformanceUpdate.cs" />
+    <Compile Include="DAL\PersistentSettingsSerializer.cs" />
+    <Compile Include="DAL\PlayerStats\PlayerStatistics.cs" />
+    <Compile Include="DAL\PlayerStats\PlayerStatisticsDataSerializer.cs" />
+    <Compile Include="DAL\PriceTag.cs" />
+    <Compile Include="DAL\ProfileContract.cs" />
+    <Compile Include="DAL\ProfileContractSerializer.cs" />
+    <Compile Include="DAL\ProfileDefaultItemSerializer.cs" />
+    <Compile Include="DAL\ProfilePerformance.cs" />
+    <Compile Include="DAL\ProfileProgressionSerializer.cs" />
+    <Compile Include="DAL\PurchaseOfferResponse.cs" />
+    <Compile Include="DAL\RatingSystem\IRatingGameBanSystem.cs" />
+    <Compile Include="DAL\RatingSystem\IRatingSystem.cs" />
+    <Compile Include="DAL\RatingSystem\RatingGamePlayerBanInfo.cs" />
+    <Compile Include="DAL\RatingSystem\RatingGamePlayerBanInfoSerializer.cs" />
+    <Compile Include="DAL\RatingSystem\RatingInfo.cs" />
+    <Compile Include="DAL\RatingSystem\RatingInfoSerializer.cs" />
+    <Compile Include="DAL\RatingSystem\RatingSeasonDateParser.cs" />
+    <Compile Include="DAL\RatingSystem\RatingSeasonInfo.cs" />
+    <Compile Include="DAL\SAbuseHistory.cs" />
+    <Compile Include="DAL\SAbuseReport.cs" />
+    <Compile Include="DAL\SAbuseTopReport.cs" />
+    <Compile Include="DAL\SAchievementUpdate.cs" />
+    <Compile Include="DAL\SAuthProfile.cs" />
+    <Compile Include="DAL\SAuthProfileSerializer.cs" />
+    <Compile Include="DAL\SBannerInfo.cs" />
+    <Compile Include="DAL\SClanKick.cs" />
+    <Compile Include="DAL\SEquipItem.cs" />
+    <Compile Include="DAL\ServerEntitySerializer.cs" />
+    <Compile Include="DAL\SFixedSizeColumnInfo.cs" />
+    <Compile Include="DAL\SFriend.cs" />
+    <Compile Include="DAL\SFriendSerializer.cs" />
+    <Compile Include="DAL\SItem.cs" />
+    <Compile Include="DAL\SkillInfo.cs" />
+    <Compile Include="DAL\SkillInfoSerializer.cs" />
+    <Compile Include="DAL\SMission.cs" />
+    <Compile Include="DAL\SoftShuffleElementSerializer.cs" />
+    <Compile Include="DAL\SoftShufflePoolData.cs" />
+    <Compile Include="DAL\SoftShufflePoolElement.cs" />
+    <Compile Include="DAL\SoftShufflePoolSerializer.cs" />
+    <Compile Include="DAL\SPendingNotification.cs" />
+    <Compile Include="DAL\SpendMoneyReason.cs" />
+    <Compile Include="DAL\SPersistentSettings.cs" />
+    <Compile Include="DAL\SponsorPointsSerializer.cs" />
+    <Compile Include="DAL\SProfileInfo.cs" />
+    <Compile Include="DAL\SProfileInfoSerializer.cs" />
+    <Compile Include="DAL\SProfileProgression.cs" />
+    <Compile Include="DAL\SRankInfo.cs" />
+    <Compile Include="DAL\SServerEntity.cs" />
+    <Compile Include="DAL\SSponsorPoints.cs" />
+    <Compile Include="DAL\StoreOffer.cs" />
+    <Compile Include="DAL\SVersionStamp.cs" />
+    <Compile Include="DAL\TestDBSerializer.cs" />
+    <Compile Include="DAL\TouchProfileResult.cs" />
+    <Compile Include="DAL\TransactionError.cs" />
+    <Compile Include="DAL\TransactionStatus.cs" />
+    <Compile Include="DAL\Utils\DBSchema.cs" />
+    <Compile Include="DAL\Utils\DBVersion.cs" />
+    <Compile Include="DAL\VarbinaryColumnInfoSerializer.cs" />
+    <Compile Include="DAL\VersionStampSerializer.cs" />
+    <Compile Include="DAL\VoucherSystem\DalVoucher.cs" />
+    <Compile Include="DAL\VoucherSystem\IVoucherSystem.cs" />
+    <Compile Include="DAL\VoucherSystem\VoucherStatus.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
